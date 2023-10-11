@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page_name }}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="title">
+            <img id="avatar" src="{{ url_for('static', filename='avatar.png') }}">
+            <h1>Harry "Hatman" Martin</h1>
+            <h1>Personal Brand</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">About Me</a></li>
+                <li><a href="{{ url_for('goals') }}">My Goals</a></li>
+                <li><a href="{{ url_for('projects') }}">My Work</a></li>
+                <li><a href="{{ url_for('reflection') }}">Reflection</a></li>
+                <li><a href="{{ url_for('online') }}">Online Presence</a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
