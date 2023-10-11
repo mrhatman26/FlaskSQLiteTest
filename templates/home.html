@@ -3,42 +3,9 @@
 <div id="home_div">
         <div id="home_paragraph1">
                 <h3 id="page_nm_home">About Me</h3>
-                <div id="home_image">
-                        <img src="{{ url_for('static', filename='StatementVer1.jpg') }}">
-                        
-                </div>
-                <div id="aboutme">
-                        <p>Ever since I was a child, I have always wanted to develop videogames of my own, and since I got my first computer
-                        I have always found myself intrigued by how they work. With the support of my computer science teacher, I found my love
-                        of programming and since then, I've not only wanted to make my own videogames, but I've also wanted to develop my own useful
-                        software. Now that I'm in university, I want to continue my love of computer science and allow myself to program videogames
-                        and software to the best of my ability. However, I also have ONE major wish for myself which is to never make weapons or
-                        allow my programs to cause harm.
-                </div>
-                <div id="home_image">
-                        <img src="{{ url_for('static', filename='DSC.PNG') }}">
-                        
-                </div>
-                <div id="aboutme">
-                        <br>
-                        <p>Beyond my love of computer science, I also have a great fondness for the following:<br><br></p>
-                        <p><b>-Photography:</b> I have a camera with me most of the time so that I can take pictures of the landscapes
-                        that me and my family go to. While I do edit images, I prefer to keep them as close to their original
-                        versions as possible.</p><br><br>
-                        <p><b>-Video Editing:</b> I love making videos of various things (usually video games or my programs) and editing them
-                        for people to watch. Most of my videos would be quite boring for most people to watch, but I edit them because I
-                        love video editing.</p><br><br>
-                        <p><b>-Writing:</b> I love writing various stories, especially short ones. One day, I would love to be able to publish my own
-                        book, but I can never find my stories good enough and usually stop writing them and start new ones.</p>
-                </div>
-                <div id="home_image">
-                        <img src="{{ url_for('static', filename='Stories.PNG') }}">
-                        
-                </div>
-                <br>
-                <div id="tinymessage">
-                        <p>And yes, I do love the colour orange. Blue is good too I guess. Oh yeah, and I'm not too great at CSS so I hope you enjoy the look of this site! It's probably the best I can do! -_-</p>
-                </div>
+                {% for item in staff %}
+                        <p>{{item}}</p>
+                {% endfor %}
         </div>
 </div>
 {% endblock %}
